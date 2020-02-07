@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Use this file to deploy some handlers/chains and services      --><!-- Two ways to do this:                                           --><!--   java org.apache.axis.client.AdminClient deploy.wsdd          --><!--      after the axis server is running                          --><!-- or                                                             --><!--   java org.apache.axis.utils.Admin client|server deploy.wsdd   --><!--      from the same directory that the Axis engine runs         --><deployment xmlns="http://xml.apache.org/axis/wsdd/" xmlns:java="http://xml.apache.org/axis/wsdd/providers/java">
+
+  <!-- Services from PyramidWordService WSDL service -->
+
+  <service name="PyramidWord" provider="java:RPC" style="wrapped" use="literal">
+      <parameter name="wsdlTargetNamespace" value="http://ws.pyramidword.com"/>
+      <parameter name="wsdlServiceElement" value="PyramidWordService"/>
+      <parameter name="schemaQualified" value="http://ws.pyramidword.com"/>
+      <parameter name="wsdlServicePort" value="PyramidWord"/>
+      <parameter name="className" value="com.pyramidword.ws.PyramidWord"/>
+      <parameter name="wsdlPortType" value="PyramidWord"/>
+      <parameter name="typeMappingVersion" value="1.2"/>
+      <operation xmlns:operNS="http://ws.pyramidword.com" xmlns:retNS="http://ws.pyramidword.com" xmlns:rtns="http://www.w3.org/2001/XMLSchema" name="checkPyramidWord" qname="operNS:checkPyramidWord" returnQName="retNS:checkPyramidWordReturn" returnType="rtns:boolean" soapAction="">
+        <parameter xmlns:pns="http://ws.pyramidword.com" xmlns:tns="http://www.w3.org/2001/XMLSchema" qname="pns:inputString" type="tns:string"/>
+      </operation>
+      <parameter name="allowedMethods" value="checkPyramidWord"/>
+
+  </service>
+</deployment>
