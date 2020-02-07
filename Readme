@@ -1,3 +1,5 @@
+PYRAMID WORD
+
 A word is a ‘pyramid’ word if the letters can be arranged in increasing frequency, starting with 1 
 and continuing without gaps and without duplicates.
 
