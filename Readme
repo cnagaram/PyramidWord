@@ -6,3 +6,5 @@ banana is a pyramid word because you have 1 'b', 2 'n's, and 3 'a's.
 abbeeedddd is a pyramid word because you have 1 'a', 2 'b's, 3 'e's, and 4 'd's.
 
 bandana is not a pyramid word because you have 1 'b' and 1 'd'.
+
+Note: The logic of pyrramid word is in the file PyramidWord.java and the file is in following folder: src/com/pyramidword/ws
