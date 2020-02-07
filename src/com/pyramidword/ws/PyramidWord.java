@@ -4,7 +4,11 @@ import java.io.*;
 import java.util.*;
 
 public class PyramidWord {
-	public boolean checkPyramidWord(String inputString) throws IOException {		
+	public boolean checkPyramidWord(String inputString) throws IOException {
+
+		if(inputString == null || inputString.isBlank())
+			return false;	
+	
 		char[] charArray = new char[inputString.length()];
 		HashMap<Character,Integer> letterCountMap = new HashMap<Character,Integer>();
 		
